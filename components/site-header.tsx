@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, Bot, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { ThemeToggle } from "./theme-toggle"
@@ -25,9 +25,7 @@ export function SiteHeader() {
       <div className="mx-auto w-full border-b border-white/10 bg-white/60 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-white/10 dark:bg-neutral-900/40">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <Link href="/" className="flex items-center gap-2" aria-label="Agentic AI Club home">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-indigo-600 to-purple-600 text-white shadow">
-              <Bot className="h-5 w-5" />
-            </span>
+            <img src="/logos/image.png" alt="Agentic AI Club Logo" className="h-8 w-8 rounded-lg" />
             <span className="text-sm font-semibold tracking-tight sm:text-base">Agentic AI@Purdue</span>
           </Link>
 
@@ -63,9 +61,7 @@ export function SiteHeader() {
                 <SheetContent side="right" className="bg-white/90 backdrop-blur dark:bg-neutral-900/80">
                   <SheetHeader>
                     <SheetTitle className="flex items-center gap-2">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
-                        <Bot className="h-5 w-5" />
-                      </span>
+                      <img src="/logos/image.png" alt="Agentic AI Club Logo" className="h-8 w-8 rounded-lg" />
                       Agentic AI Club
                     </SheetTitle>
                   </SheetHeader>
