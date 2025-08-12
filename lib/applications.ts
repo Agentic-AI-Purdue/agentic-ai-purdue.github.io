@@ -1,6 +1,10 @@
 import { supabase, type Application } from './supabase'
 
 export async function submitApplication(application: Omit<Application, 'id' | 'created_at' | 'status'>) {
+  if (!supabase) {
+    throw new Error('Supabase client not available')
+  }
+
   try {
     const { data, error } = await supabase
       .from('applications')
@@ -33,6 +37,10 @@ export async function submitApplication(application: Omit<Application, 'id' | 'c
 }
 
 export async function getApplications() {
+  if (!supabase) {
+    throw new Error('Supabase client not available')
+  }
+
   try {
     const { data, error } = await supabase
       .from('applications')
