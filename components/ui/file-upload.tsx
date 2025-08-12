@@ -86,8 +86,8 @@ export function FileUpload({
   }
 
   return (
-    <div className={cn("space-y-2", className)}>
-      <Label htmlFor="resume">Resume (PDF)</Label>
+    <div className={cn("space-y-3", className)}>
+      <Label htmlFor="resume" className="mb-3 block">Resume (PDF)</Label>
       
       <div
         className={cn(

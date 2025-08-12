@@ -10,8 +10,8 @@ export interface Application {
   id?: string
   name: string
   email: string
-  purdue_id: string
-  year_major: string
+  major: string
+  year: string
   programming_level: 'beginner' | 'intermediate' | 'advanced'
   ai_level: 'beginner' | 'intermediate' | 'advanced'
   why_join: string

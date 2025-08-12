@@ -103,7 +103,8 @@ export function ApplicationsTable() {
             <TableRow>
               <TableHead>Name</TableHead>
               <TableHead>Email</TableHead>
-              <TableHead>Year/Major</TableHead>
+              <TableHead>Major</TableHead>
+              <TableHead>Year</TableHead>
               <TableHead>Experience</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>Submitted</TableHead>
@@ -124,7 +125,8 @@ export function ApplicationsTable() {
                     </Button>
                   </div>
                 </TableCell>
-                <TableCell>{app.year_major}</TableCell>
+                <TableCell>{app.major}</TableCell>
+                <TableCell>{app.year}</TableCell>
                 <TableCell>
                   <div className="text-sm">
                     <div>Prog: {app.programming_level}</div>

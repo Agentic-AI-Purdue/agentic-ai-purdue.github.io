@@ -8,8 +8,8 @@ export async function submitApplication(application: Omit<Application, 'id' | 'c
         {
           name: application.name,
           email: application.email,
-          purdue_id: application.purdue_id,
-          year_major: application.year_major,
+          major: application.major,
+          year: application.year,
           programming_level: application.programming_level,
           ai_level: application.ai_level,
           why_join: application.why_join,

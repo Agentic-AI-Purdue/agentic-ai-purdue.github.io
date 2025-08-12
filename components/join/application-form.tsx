@@ -20,8 +20,8 @@ import { uploadResume } from "@/lib/upload"
 type FormState = {
   name: string
   email: string
-  purdueId: string
-  yearMajor: string
+  major: string
+  year: string
   programming: "beginner" | "intermediate" | "advanced"
   aiLevel: "beginner" | "intermediate" | "advanced"
   why: string
@@ -36,8 +36,8 @@ export function ApplicationForm() {
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
-    purdueId: "",
-    yearMajor: "",
+    major: "",
+    year: "",
     programming: "beginner",
     aiLevel: "beginner",
     why: "",
@@ -48,7 +48,8 @@ export function ApplicationForm() {
     const e: Record<string, string> = {}
     if (!form.name) e.name = "Name is required"
     if (!form.email || !/^\S+@\S+\.\S+$/.test(form.email)) e.email = "Valid email required"
-    if (!form.yearMajor) e.yearMajor = "Please select your year/major"
+    if (!form.major) e.major = "Major is required"
+    if (!form.year) e.year = "Please select your year"
     if (!form.programming) e.programming = "Select programming experience"
     if (!form.aiLevel) e.aiLevel = "Select AI/ML experience"
     if (!form.why || form.why.length < 20) e.why = "Tell us more (min 20 characters)"
@@ -73,8 +74,8 @@ export function ApplicationForm() {
       await submitApplication({
         name: form.name,
         email: form.email,
-        purdue_id: form.purdueId,
-        year_major: form.yearMajor,
+        major: form.major,
+        year: form.year,
         programming_level: form.programming,
         ai_level: form.aiLevel,
         why_join: form.why,
@@ -91,8 +92,8 @@ export function ApplicationForm() {
       setForm({
         name: "",
         email: "",
-        purdueId: "",
-        yearMajor: "",
+        major: "",
+        year: "",
         programming: "beginner",
         aiLevel: "beginner",
         why: "",
@@ -116,10 +117,10 @@ export function ApplicationForm() {
   return (
     <section className="container mx-auto px-4 py-10">
       <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl border border-neutral-200/70 bg-white/80 p-6 shadow-sm backdrop-blur dark:border-neutral-800/70 dark:bg-neutral-900/70">
-        <form onSubmit={onSubmit} noValidate className="space-y-5">
+        <form onSubmit={onSubmit} noValidate className="space-y-6">
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name" className="mb-3 block">Name</Label>
               <Input
                 id="name"
                 value={form.name}
@@ -136,7 +137,7 @@ export function ApplicationForm() {
               )}
             </div>
             <div>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email" className="mb-3 block">Email</Label>
               <Input
                 id="email"
                 type="email"
@@ -157,40 +158,41 @@ export function ApplicationForm() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <Label htmlFor="purdueId">Purdue ID</Label>
+              <Label htmlFor="major" className="mb-3 block">Major</Label>
               <Input
-                id="purdueId"
-                value={form.purdueId}
-                onChange={(e) => setForm({ ...form, purdueId: e.target.value })}
-                placeholder="PUID (optional)"
+                id="major"
+                value={form.major}
+                onChange={(e) => setForm({ ...form, major: e.target.value })}
+                placeholder="Computer Science, Engineering, etc."
                 disabled={submitting}
               />
+              {errors.major && (
+                <p id="major-error" className="mt-1 text-sm text-red-600 dark:text-red-400">
+                  {errors.major}
+                </p>
+              )}
             </div>
             <div>
-              <Label htmlFor="yearMajor">Year & Major</Label>
+              <Label htmlFor="year" className="mb-3 block">Year</Label>
               <Select
-                value={form.yearMajor}
-                onValueChange={(value) => setForm({ ...form, yearMajor: value })}
+                value={form.year}
+                onValueChange={(value) => setForm({ ...form, year: value })}
                 disabled={submitting}
               >
-                <SelectTrigger aria-invalid={!!errors.yearMajor} aria-describedby="yearMajor-error">
-                  <SelectValue placeholder="Select year/major" />
+                <SelectTrigger aria-invalid={!!errors.year} aria-describedby="year-error">
+                  <SelectValue placeholder="Select year" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Freshman - CS">Freshman - CS</SelectItem>
-                  <SelectItem value="Freshman - Other">Freshman - Other</SelectItem>
-                  <SelectItem value="Sophomore - CS">Sophomore - CS</SelectItem>
-                  <SelectItem value="Sophomore - Other">Sophomore - Other</SelectItem>
-                  <SelectItem value="Junior - CS">Junior - CS</SelectItem>
-                  <SelectItem value="Junior - Other">Junior - Other</SelectItem>
-                  <SelectItem value="Senior - CS">Senior - CS</SelectItem>
-                  <SelectItem value="Senior - Other">Senior - Other</SelectItem>
-                  <SelectItem value="Graduate Student">Graduate Student</SelectItem>
+                  <SelectItem value="Freshman">Freshman</SelectItem>
+                  <SelectItem value="Sophomore">Sophomore</SelectItem>
+                  <SelectItem value="Junior">Junior</SelectItem>
+                  <SelectItem value="Senior">Senior</SelectItem>
+                  <SelectItem value="Graduate">Graduate</SelectItem>
                 </SelectContent>
               </Select>
-              {errors.yearMajor && (
-                <p id="yearMajor-error" className="mt-1 text-sm text-red-600 dark:text-red-400">
-                  {errors.yearMajor}
+              {errors.year && (
+                <p id="year-error" className="mt-1 text-sm text-red-600 dark:text-red-400">
+                  {errors.year}
                 </p>
               )}
             </div>
@@ -198,7 +200,7 @@ export function ApplicationForm() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <Label htmlFor="programming">Programming Experience</Label>
+              <Label htmlFor="programming" className="mb-3 block">Programming Experience</Label>
               <Select
                 value={form.programming}
                 onValueChange={(value: "beginner" | "intermediate" | "advanced") => 
@@ -222,7 +224,7 @@ export function ApplicationForm() {
               )}
             </div>
             <div>
-              <Label htmlFor="aiLevel">AI/ML Experience</Label>
+              <Label htmlFor="aiLevel" className="mb-3 block">AI/ML Experience</Label>
               <Select
                 value={form.aiLevel}
                 onValueChange={(value: "beginner" | "intermediate" | "advanced") => 
@@ -248,7 +250,7 @@ export function ApplicationForm() {
           </div>
 
           <div>
-            <Label htmlFor="why">Why do you want to join?</Label>
+            <Label htmlFor="why" className="mb-3 block">Why do you want to join?</Label>
             <Textarea
               id="why"
               value={form.why}
@@ -267,7 +269,7 @@ export function ApplicationForm() {
           </div>
 
           <div>
-            <Label htmlFor="portfolio">Portfolio/GitHub URL (optional)</Label>
+            <Label htmlFor="portfolio" className="mb-3 block">Portfolio/GitHub URL (optional)</Label>
             <Input
               id="portfolio"
               type="url"
