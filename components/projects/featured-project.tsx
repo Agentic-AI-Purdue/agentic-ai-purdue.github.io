@@ -47,7 +47,7 @@ export function FeaturedProject() {
               </Avatar>
             </div>
             <Button asChild className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-              <Link href="https://github.com/" target="_blank">View Project</Link>
+              <Link href="https://github.com/Agentic-AI-Purdue" target="_blank">View Project</Link>
             </Button>
           </div>
         </div>

@@ -26,9 +26,10 @@ export default function JoinPage() {
       <section className="container mx-auto px-4">
         <h2 className="text-2xl font-semibold">Requirements</h2>
         <ul className="mt-3 list-disc pl-5 text-neutral-700 dark:text-neutral-300">
-          <li>Basic programming knowledge</li>
-          <li>Time commitment: Whatever you can give</li>
+          <li>Interest in AI agents</li>
+          <li>Time commitment: 5-10 hours per week</li>
           <li>Collaboration mindset and growth mindset</li>
+          <li>Previous programming experience</li>
         </ul>
       </section>
 

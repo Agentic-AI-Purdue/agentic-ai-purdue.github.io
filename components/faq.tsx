@@ -11,7 +11,7 @@ export function FAQ() {
         </AccordionItem>
         <AccordionItem value="q2">
           <AccordionTrigger>What’s the time commitment?</AccordionTrigger>
-          <AccordionContent>Plan for ~4–6 hours/week including meetings and project work.</AccordionContent>
+          <AccordionContent>Plan for ~5–10 hours/week including meetings and project work.</AccordionContent>
         </AccordionItem>
         <AccordionItem value="q3">
           <AccordionTrigger>When do you meet?</AccordionTrigger>
