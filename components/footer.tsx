@@ -24,7 +24,7 @@ export function Footer() {
           <h5 className="text-sm font-semibold">Social</h5>
           <ul className="mt-2 space-y-2 text-sm">
             <li>
-              <a className="inline-flex items-center gap-2 hover:text-indigo-600 dark:hover:text-indigo-400" href="https://github.com/" target="_blank" rel="noreferrer">
+              <a className="inline-flex items-center gap-2 hover:text-indigo-600 dark:hover:text-indigo-400" href="https://github.com/Agentic-AI-Purdue" target="_blank" rel="noreferrer">
                 <Github className="h-4 w-4" /> GitHub
               </a>
             </li>
