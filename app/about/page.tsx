@@ -14,12 +14,19 @@ export default function AboutPage() {
     <main>
       <SiteHeader />
       <section className="relative overflow-hidden">
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 pt-16 pb-8">
           <h1 className="text-4xl font-bold tracking-tight">{"Our Mission & Vision"}</h1>
           <p className="mt-4 max-w-3xl text-neutral-700 dark:text-neutral-300">
             We cultivate the next generation of AI-native builders by mastering state-of-the-art agentic frameworks,
             shipping real solutions, and sharing our work openly with the community.
           </p>
+          <div className="mt-6 rounded-xl border border-neutral-200/70 bg-white/70 p-6 backdrop-blur dark:border-neutral-800/70 dark:bg-neutral-900/60">
+            <h2 className="text-xl font-semibold">Mission</h2>
+            <p className="mt-2 text-neutral-700 dark:text-neutral-300">
+              To empower students to design, build, and deploy human-centered AI agents by shipping fast, learning in public,
+              and partnering with real users and organizations to deliver measurable impact.
+            </p>
+          </div>
           <div className="mt-6 rounded-xl border border-neutral-200/70 bg-white/70 p-6 backdrop-blur dark:border-neutral-800/70 dark:bg-neutral-900/60">
             <h2 className="text-xl font-semibold">Vision</h2>
             <p className="mt-2 text-neutral-700 dark:text-neutral-300">
@@ -31,7 +38,7 @@ export default function AboutPage() {
 
       <ValuesGrid />
 
-      <section className="container mx-auto px-4 py-12">
+      <section className="container mx-auto px-4 pt-0 pb-12">
         <h2 className="text-2xl font-semibold">How We&apos;re Organized</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-neutral-200/70 bg-white/70 p-6 backdrop-blur dark:border-neutral-800/70 dark:bg-neutral-900/60">

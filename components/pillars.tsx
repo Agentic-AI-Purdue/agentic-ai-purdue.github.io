@@ -6,7 +6,7 @@ const pillars = [
     icon: Code2,
     lines: [
       "Master cutting-edge AI frameworks through hands-on projects",
-      "2-week onboarding bootcamp covering LangChain, CrewAI, and more",
+      "1-week onboarding bootcamp covering LangChain, CrewAI, and more",
     ],
   },
   {
@@ -14,7 +14,7 @@ const pillars = [
     icon: Rocket,
     lines: [
       "Deploy working AI solutions for real clients and organizations",
-      "5+ client projects planned for 2025",
+      "3+ client projects planned for 2025",
     ],
   },
   {

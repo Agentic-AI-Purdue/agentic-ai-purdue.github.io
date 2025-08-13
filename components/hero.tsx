@@ -24,7 +24,7 @@ export function Hero() {
       <div className="container mx-auto flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 py-16 text-center">
         <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-200/60 bg-white/70 px-3 py-1 text-xs text-indigo-700 shadow-sm backdrop-blur dark:border-indigo-800/50 dark:bg-neutral-900/50 dark:text-indigo-300">
           <Users className="h-4 w-4" />
-          50+ Active Members
+          {/* 50+ Active Members */}
         </span>
         <h1 className="max-w-3xl bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-4xl font-extrabold leading-tight text-transparent dark:from-white dark:to-neutral-300 sm:text-5xl md:text-6xl">
           {"Building the Future of AI Agents"}

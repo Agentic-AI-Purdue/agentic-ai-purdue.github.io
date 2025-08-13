@@ -1,5 +1,5 @@
 const stats = [
-  { label: "Members", value: "50+" },
+  //{ label: "Members", value: "50+" },
   { label: "Projects", value: "5+" },
   { label: "Open Source", value: "100%" },
   { label: "Founded", value: "2025" },
@@ -8,7 +8,7 @@ const stats = [
 export function Stats() {
   return (
     <section className="container mx-auto px-4 pb-12">
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {stats.map((s) => (
           <div
             key={s.label}

@@ -1,17 +1,17 @@
-import { Hammer, Target, Unlock, ShieldCheck, Users } from 'lucide-react'
+import { Hammer, Lightbulb, Unlock, ShieldCheck, Users, BarChart3 } from 'lucide-react'
 
 const values = [
   {
     title: "Build to Learn",
     desc: "We grow by shipping, not just studying.",
-    more: "We prioritize building functional prototypes, learning through iteration, and sharing demos every cycle.",
+    more: "We prioritize building functional prototypes, learning through iteration, and sharing demos every cycle. We run short cycles, ship small, and use lightweight post-mortems to compound learning. We are not afraid to fail fast and learn from our mistakes.",
     icon: Hammer,
   },
   {
     title: "Clarity over Complexity",
     desc: "Clean, minimal solutions over bloated systems.",
-    more: "We value straightforward architecture and readable code with clear boundaries.",
-    icon: Target,
+    more: "We value straightforward architecture and readable code with clear boundaries. We favor simplicity, maintainability, and clarity over novelty for its own sake.",
+    icon: Lightbulb,
   },
   {
     title: "Open by Default",
@@ -27,15 +27,21 @@ const values = [
   },
   {
     title: "User-Centered Design",
-    desc: "Every agent should serve a real human or organization.",
-    more: "We interview users, validate needs, and measure outcomes—not just model metrics.",
+    desc: "Agents augment people, humans stay in control.",
+    more: "Every agent should serve a real human or organization. We interview users, validate needs, and measure outcomes—not just model metrics. We design feedback loops, clear controls, and UI affordances that keep humans in charge.",
     icon: Users,
+  },
+  {
+    title: "Measure What Matters",
+    desc: "Decisions are driven by meaningful metrics.",
+    more: "We define success upfront, track impact (not vanity), and retire what doesn't move the needle.",
+    icon: BarChart3,
   },
 ]
 
 export function ValuesGrid() {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 pt-8 pb-16">
       <h2 className="mb-8 text-3xl font-bold tracking-tight">Core Values</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {values.map((v) => {

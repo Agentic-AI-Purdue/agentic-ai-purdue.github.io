@@ -70,7 +70,7 @@ export function ProjectsClient() {
         </p>
         <div className="mt-4">
           <a
-            href="https://github.com/"
+            href="https://github.com/Agentic-AI-Purdue"
             target="_blank"
             rel="noreferrer"
             className="text-indigo-700 underline underline-offset-4 hover:text-indigo-600 dark:text-indigo-300 dark:hover:text-indigo-200"
