@@ -4,7 +4,7 @@
 
 ## Live Site
 
-Visit the public website at: [Coming Soon - Deploy Link]
+Visit the public website at: https://agentic-ai-purdue.github.io
 
 ## Tech Stack
 
