@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site-header"
 import { ValuesGrid } from "@/components/values-grid"
 import { JoinCTA } from "@/components/join-cta"
 import { Footer } from "@/components/footer"
+import { EventsCalendar } from "@/components/events-calendar"
 
 export const metadata: Metadata = {
   title: "About – Agentic AI Club",
@@ -60,6 +61,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/*
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-2xl font-semibold">Our Vision for 2025</h2>
         <ul className="mt-3 list-disc pl-5 text-neutral-700 dark:text-neutral-300">
@@ -67,6 +69,12 @@ export default function AboutPage() {
           <li>Inter-university expansion</li>
           <li>Quarterly open-source releases and demos</li>
         </ul>
+      </section>
+      */}
+
+      <section className="container mx-auto px-4 pt-0 pb-12">
+        <h2 className="text-2xl font-semibold">Event Calendar (EST)</h2>
+        <EventsCalendar />
       </section>
 
       <JoinCTA />

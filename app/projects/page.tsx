@@ -13,7 +13,7 @@ export default function ProjectsPage() {
   return (
     <main>
       <SiteHeader />
-      <ProjectsClient />
+      {/* <ProjectsClient /> */}
       <Footer />
     </main>
   )
