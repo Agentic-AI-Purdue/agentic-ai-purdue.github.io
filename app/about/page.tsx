@@ -45,7 +45,13 @@ export default function AboutPage() {
           <div className="rounded-xl border border-neutral-200/70 bg-white/70 p-6 backdrop-blur dark:border-neutral-800/70 dark:bg-neutral-900/60">
             <h3 className="font-semibold">Pod System</h3>
             <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
-              Small pods of 5–7 members ship features weekly. Pods own end-to-end delivery and demos.
+              Small pods of 5–7 members ship features monthly. Pods own end-to-end delivery and demos.
+            </p>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+              A smaller milestone implemented biweekly and a complete feature/project deployed every 4 weeks.
+            </p>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+              Engineering Demos once a week where progress is relayed to the larger club.
             </p>
           </div>
           <div className="rounded-xl border border-neutral-200/70 bg-white/70 p-6 backdrop-blur dark:border-neutral-800/70 dark:bg-neutral-900/60">
