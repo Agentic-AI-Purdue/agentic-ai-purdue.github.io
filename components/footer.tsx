@@ -15,7 +15,7 @@ export function Footer() {
           <h5 className="text-sm font-semibold">Quick Links</h5>
           <ul className="mt-2 space-y-1 text-sm">
             <li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400" href="/about">About</Link></li>
-            <li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400" href="/projects">Projects</Link></li>
+            {/* <li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400" href="/projects">Projects</Link></li> */}
             <li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400" href="/join">Join</Link></li>
             <li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400" href="/join#contact">Contact</Link></li>
           </ul>
@@ -29,13 +29,13 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a className="inline-flex items-center gap-2 hover:text-indigo-600 dark:hover:text-indigo-400" href="https://linkedin.com/" target="_blank" rel="noreferrer">
+              <a className="inline-flex items-center gap-2 hover:text-indigo-600 dark:hover:text-indigo-400" href="https://www.linkedin.com/company/agentic-ai-purdue/" target="_blank" rel="noreferrer">
                 <Linkedin className="h-4 w-4" /> LinkedIn
               </a>
             </li>
             <li>
-              <a className="inline-flex items-center gap-2 hover:text-indigo-600 dark:hover:text-indigo-400" href="#" target="_blank" rel="noreferrer">
-                <MessageSquare className="h-4 w-4" /> Discord/Slack
+              <a className="inline-flex items-center gap-2 hover:text-indigo-600 dark:hover:text-indigo-400" href="https://join.slack.com/t/agenticaipurdue/shared_invite/zt-3b8vk5tmr-Tt~D_588iw8GwDiX2J6qyw" target="_blank" rel="noreferrer">
+                <MessageSquare className="h-4 w-4" /> Slack
               </a>
             </li>
           </ul>
